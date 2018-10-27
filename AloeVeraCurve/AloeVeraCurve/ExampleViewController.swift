@@ -14,6 +14,7 @@ final class ExampleViewController: UIViewController {
     
     private var curve: ((CGFloat) -> CGFloat)!
     private var viewBounds: CGRect = .zero
+    private var playgroundSize: CGSize = .zero
     
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var circleView: UIView!
@@ -31,6 +32,7 @@ final class ExampleViewController: UIViewController {
         if viewBounds != view.bounds {
             viewBounds = view.bounds
             
+            playgroundSize = calculatePlaygroundSize()
             curve = makeCurve()
             updateCircle(forProgress: 0)
         }
@@ -46,11 +48,17 @@ private extension ExampleViewController {
         if example.isTimeFunction {
             
         } else {
-            let x = progress * (containerView.frame.width - circleView.frame.width)
+            let x = progress * playgroundSize.width
             let y = curve(x)
             circleView.transform = CGAffineTransform(translationX: x, y: y)
         }
         progressLabel.text = String(format: "%.2f", progress)
+    }
+    
+    func calculatePlaygroundSize() -> CGSize {
+        let width = containerView.frame.width - circleView.frame.width
+        let height = containerView.frame.height - circleView.frame.height
+        return CGSize(width: width, height: height)
     }
     
     func makeCurve() -> (CGFloat) -> CGFloat {
@@ -60,8 +68,6 @@ private extension ExampleViewController {
     }
     
     func makeLinearCurve() -> (CGFloat) -> CGFloat {
-        return { _ in
-            return 100
-        }
+        return try! linearCurveFor(point1: CGPoint(x: 0, y: playgroundSize.height), point2: CGPoint(x: playgroundSize.width, y: 0))
     }
 }

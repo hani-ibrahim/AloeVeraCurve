@@ -16,6 +16,7 @@
 		376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D8218474E900C39AFC /* ExampleViewController.swift */; };
 		376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DA2184751E00C39AFC /* ListViewController.swift */; };
 		376E06DD218475B600C39AFC /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DC218475B600C39AFC /* Example.swift */; };
+		376E06DF2184841F00C39AFC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DE2184841F00C39AFC /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		376E06D8218474E900C39AFC /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		376E06DA2184751E00C39AFC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		376E06DC218475B600C39AFC /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		376E06DE2184841F00C39AFC /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		376E06D12184727500C39AFC /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				376E06DE2184841F00C39AFC /* Errors.swift */,
 				376E06D22184729B00C39AFC /* LinearCurve.swift */,
 			);
 			name = sources;
@@ -227,6 +230,7 @@
 				376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */,
 				376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */,
 				376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */,
+				376E06DF2184841F00C39AFC /* Errors.swift in Sources */,
 				376E06DD218475B600C39AFC /* Example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
