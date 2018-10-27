@@ -13,6 +13,7 @@ enum Example: String, CaseIterable {
     case quadratic
     case linearBezierCurve
     case quadraticBezierCurve
+    case cubicBezierCurve
 }
 
 extension Example {
@@ -26,6 +27,7 @@ extension Example {
         case .quadratic: return false
         case .linearBezierCurve: return true
         case .quadraticBezierCurve: return true
+        case .cubicBezierCurve: return true
         }
     }
 }

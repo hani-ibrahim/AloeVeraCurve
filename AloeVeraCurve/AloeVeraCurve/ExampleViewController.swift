@@ -74,6 +74,7 @@ private extension ExampleViewController {
         case .quadratic: return wrapNonPointFunction(makeParabolaCurve())
         case .linearBezierCurve: return makeLinearBezierCurve()
         case .quadraticBezierCurve: return makeQuadraticBezierCurve()
+        case .cubicBezierCurve: return makeCubicBezierCurve()
         }
     }
     
@@ -103,5 +104,12 @@ private extension ExampleViewController {
         return try! quadraticBezierCurve(withStartPoint: CGPoint(x: 0, y: playgroundSize.height),
                                          controlPoint: CGPoint(x: playgroundSize.width, y: playgroundSize.height),
                                          endPoint: CGPoint(x: playgroundSize.width, y: 0))
+    }
+    
+    func makeCubicBezierCurve() -> (CGFloat) -> CGPoint {
+        return try! cubicBezierCurve(withStartPoint: CGPoint(x: 0, y: playgroundSize.height),
+                                     controlPoint1: CGPoint(x: playgroundSize.width / 4, y: -playgroundSize.height),
+                                     controlPoint2: CGPoint(x: playgroundSize.width * 3 / 4, y: playgroundSize.height * 2),
+                                     endPoint: CGPoint(x: playgroundSize.width, y: 0))
     }
 }
