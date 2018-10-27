@@ -12,7 +12,7 @@ final class ExampleViewController: UIViewController {
     
     var example: Example!
     
-    private var curve: ((CGFloat) -> CGFloat)!
+    private var curve: ((CGFloat) -> CGPoint)!
     private var viewBounds: CGRect = .zero
     private var playgroundSize: CGSize = .zero
     
@@ -45,14 +45,22 @@ final class ExampleViewController: UIViewController {
 
 private extension ExampleViewController {
     func updateCircle(forProgress progress: CGFloat) {
+        let input: CGFloat
+        let readableInput: CGFloat
+        let unit: String
         if example.isTimeFunction {
-            
+            input = progress
+            readableInput = input * 100
+            unit = "%"
         } else {
-            let x = progress * playgroundSize.width
-            let y = curve(x)
-            circleView.transform = CGAffineTransform(translationX: x, y: y)
+            input = progress * playgroundSize.width
+            readableInput = input
+            unit = "pt"
         }
-        progressLabel.text = String(format: "%.2f", progress)
+        
+        let position = curve(input)
+        circleView.transform = CGAffineTransform(translationX: position.x, y: position.y)
+        progressLabel.text = String(format: "%.f %@", readableInput, unit)
     }
     
     func calculatePlaygroundSize() -> CGSize {
@@ -60,21 +68,40 @@ private extension ExampleViewController {
                       height: containerView.frame.height - circleView.frame.height)
     }
     
-    func makeCurve() -> (CGFloat) -> CGFloat {
+    func makeCurve() -> (CGFloat) -> CGPoint {
         switch example! {
-        case .linear: return makeLineCurve()
-        case .quadratic: return makeParabolaCurve()
+        case .linear: return wrapNonPointFunction(makeLineCurve())
+        case .quadratic: return wrapNonPointFunction(makeParabolaCurve())
+        case .linearBezierCurve: return makeLinearBezierCurve()
+        case .quadraticBezierCurve: return makeQuadraticBezierCurve()
+        }
+    }
+    
+    func wrapNonPointFunction(_ function: @escaping (CGFloat) -> CGFloat) -> (CGFloat) -> CGPoint {
+        return { x in
+            return CGPoint(x: x, y: function(x))
         }
     }
     
     func makeLineCurve() -> (CGFloat) -> CGFloat {
         return try! lineCurveFor(point1: CGPoint(x: 0, y: playgroundSize.height),
-                                   point2: CGPoint(x: playgroundSize.width, y: 0))
+                                 point2: CGPoint(x: playgroundSize.width, y: 0))
     }
     
     func makeParabolaCurve() -> (CGFloat) -> CGFloat {
         return try! parabolaCurveFor(point1: CGPoint(x: 0, y: 0),
-                                      point2: CGPoint(x: playgroundSize.width / 2, y: playgroundSize.height),
-                                      point3: CGPoint(x: playgroundSize.width, y: 0))
+                                     point2: CGPoint(x: playgroundSize.width / 2, y: playgroundSize.height),
+                                     point3: CGPoint(x: playgroundSize.width, y: 0))
+    }
+    
+    func makeLinearBezierCurve() -> (CGFloat) -> CGPoint {
+        return try! linearBezierCurve(withStartPoint: CGPoint(x: 0, y: playgroundSize.height),
+                                      endPoint: CGPoint(x: playgroundSize.width, y: 0))
+    }
+    
+    func makeQuadraticBezierCurve() -> (CGFloat) -> CGPoint {
+        return try! quadraticBezierCurve(withStartPoint: CGPoint(x: 0, y: playgroundSize.height),
+                                         controlPoint: CGPoint(x: playgroundSize.width, y: playgroundSize.height),
+                                         endPoint: CGPoint(x: playgroundSize.width, y: 0))
     }
 }

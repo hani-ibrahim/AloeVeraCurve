@@ -9,6 +9,5 @@
 import Foundation
 
 public enum CurveError: Error {
-    case verticalLineNotSupported
-    case quadraticAxisOfSymmetryIsNotVertical
+    case invalidParameters
 }

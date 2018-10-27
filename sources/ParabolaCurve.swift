@@ -8,12 +8,20 @@
 
 import UIKit
 
-public func parabolaCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (CGFloat) -> CGFloat {
+/// Parabola Curve `y = a x^2 + b x + c`
+///
+/// - Parameters:
+///   - point1: point on the parabola
+///   - point2: anohter point on the parabola
+///   - point3: anohter point on the parabola
+/// - Returns: A function that takes `x` and return the corresponding `y` on the parabola
+/// - Throws:
+///   - invalidParameters: if the input points have the same x poitions
+public func parabolaCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
     guard point1.x != point2.x && point1.x != point3.x else {
-        throw CurveError.quadraticAxisOfSymmetryIsNotVertical
+        throw CurveError.invalidParameters
     }
     
-    // Solving equation y = a * x^2 + b * x + c
     let x1 = point1.x
     let x2 = point2.x
     let x3 = point3.x

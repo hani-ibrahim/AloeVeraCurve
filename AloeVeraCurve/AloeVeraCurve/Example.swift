@@ -11,6 +11,8 @@ import UIKit
 enum Example: String, CaseIterable {
     case linear
     case quadratic
+    case linearBezierCurve
+    case quadraticBezierCurve
 }
 
 extension Example {
@@ -22,6 +24,8 @@ extension Example {
         switch self {
         case .linear: return false
         case .quadratic: return false
+        case .linearBezierCurve: return true
+        case .quadraticBezierCurve: return true
         }
     }
 }

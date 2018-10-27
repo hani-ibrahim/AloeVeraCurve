@@ -8,12 +8,19 @@
 
 import UIKit
 
-public func lineCurveFor(point1: CGPoint, point2: CGPoint) throws -> (CGFloat) -> CGFloat {
+/// Line Curve `y = m x + c`
+///
+/// - Parameters:
+///   - point1: point on the line
+///   - point2: anohter point on the line
+/// - Returns: A function that takes `x` and return the corresponding `y` on the line
+/// - Throws:
+///   - invalidParameters: if the input points have the same x poitions
+public func lineCurveFor(point1: CGPoint, point2: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
     guard point1.x != point2.x else {
-        throw CurveError.verticalLineNotSupported
+        throw CurveError.invalidParameters
     }
     
-    // Solving equation y = m * x + c
     let x1 = point1.x
     let x2 = point2.x
     let y1 = point1.y
