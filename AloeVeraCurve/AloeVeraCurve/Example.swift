@@ -10,6 +10,7 @@ import UIKit
 
 enum Example: String, CaseIterable {
     case linear
+    case quadratic
 }
 
 extension Example {
@@ -20,6 +21,7 @@ extension Example {
     var isTimeFunction: Bool {
         switch self {
         case .linear: return false
+        case .quadratic: return false
         }
     }
 }

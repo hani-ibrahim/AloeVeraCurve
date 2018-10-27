@@ -17,6 +17,7 @@
 		376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DA2184751E00C39AFC /* ListViewController.swift */; };
 		376E06DD218475B600C39AFC /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DC218475B600C39AFC /* Example.swift */; };
 		376E06DF2184841F00C39AFC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DE2184841F00C39AFC /* Errors.swift */; };
+		376E06E321848ED100C39AFC /* QuadraticCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06E221848ED100C39AFC /* QuadraticCurve.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		376E06DA2184751E00C39AFC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		376E06DC218475B600C39AFC /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		376E06DE2184841F00C39AFC /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		376E06E221848ED100C39AFC /* QuadraticCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticCurve.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				376E06DE2184841F00C39AFC /* Errors.swift */,
 				376E06D22184729B00C39AFC /* LinearCurve.swift */,
+				376E06E221848ED100C39AFC /* QuadraticCurve.swift */,
 			);
 			name = sources;
 			path = ../../sources;
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376E06D32184729B00C39AFC /* LinearCurve.swift in Sources */,
+				376E06E321848ED100C39AFC /* QuadraticCurve.swift in Sources */,
 				376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */,
 				376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */,
 				376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */,

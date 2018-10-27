@@ -56,18 +56,25 @@ private extension ExampleViewController {
     }
     
     func calculatePlaygroundSize() -> CGSize {
-        let width = containerView.frame.width - circleView.frame.width
-        let height = containerView.frame.height - circleView.frame.height
-        return CGSize(width: width, height: height)
+        return CGSize(width: containerView.frame.width - circleView.frame.width,
+                      height: containerView.frame.height - circleView.frame.height)
     }
     
     func makeCurve() -> (CGFloat) -> CGFloat {
         switch example! {
         case .linear: return makeLinearCurve()
+        case .quadratic: return makeQuadraticCurve()
         }
     }
     
     func makeLinearCurve() -> (CGFloat) -> CGFloat {
-        return try! linearCurveFor(point1: CGPoint(x: 0, y: playgroundSize.height), point2: CGPoint(x: playgroundSize.width, y: 0))
+        return try! linearCurveFor(point1: CGPoint(x: 0, y: playgroundSize.height),
+                                   point2: CGPoint(x: playgroundSize.width, y: 0))
+    }
+    
+    func makeQuadraticCurve() -> (CGFloat) -> CGFloat {
+        return try! quadraticCurveFor(point1: CGPoint(x: 0, y: 0),
+                                      point2: CGPoint(x: playgroundSize.width / 2, y: playgroundSize.height),
+                                      point3: CGPoint(x: playgroundSize.width, y: 0))
     }
 }
