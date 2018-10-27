@@ -1,5 +1,5 @@
 //
-//  Example.swift
+//  Curve.swift
 //  AloeVeraCurve
 //
 //  Created by Hani on 27.10.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Example: String, CaseIterable {
+enum Curve: String, CaseIterable {
     case linear
     case quadratic
     case linearBezierCurve
@@ -16,9 +16,9 @@ enum Example: String, CaseIterable {
     case cubicBezierCurve
 }
 
-extension Example {
+extension Curve {
     var title: String {
-        return rawValue.capitalized
+        return rawValue.titlecased()
     }
     
     var isTimeFunction: Bool {
@@ -29,5 +29,13 @@ extension Example {
         case .quadraticBezierCurve: return true
         case .cubicBezierCurve: return true
         }
+    }
+}
+
+private extension String {
+    func titlecased() -> String {
+        return replacingOccurrences(of: "([A-Z])", with: " $1", options: .regularExpression, range: range(of: self))
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .capitalized
     }
 }

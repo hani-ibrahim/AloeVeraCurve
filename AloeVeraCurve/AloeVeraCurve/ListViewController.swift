@@ -11,22 +11,22 @@ import UIKit
 final class ListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Example.allCases.count
+        return Curve.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        cell.textLabel?.text = Example.allCases[indexPath.row].title
+        cell.textLabel?.text = Curve.allCases[indexPath.row].title
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? ExampleViewController,
+        guard let viewController = segue.destination as? DrawingViewController,
             let cell = sender as? UITableViewCell,
             let indexPath = tableView.indexPath(for: cell) else {
                 return
         }
         
-        viewController.example = Example.allCases[indexPath.row]
+        viewController.curve = Curve.allCases[indexPath.row]
     }
 }

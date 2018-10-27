@@ -8,6 +8,14 @@
 
 import UIKit
 
+/// Linear Bézier Curve
+///
+/// - Parameters:
+///   - startPoint: start point on the curve
+///   - endPoint: end point on the curve
+/// - Returns: A function that takes `time` (0...1) and return the corresponding `point` on the curve
+/// - Throws:
+///   - invalidParameters: if the input points are the same
 public func linearBezierCurve(withStartPoint startPoint: CGPoint, endPoint: CGPoint) throws -> (_ time: CGFloat) -> CGPoint {
     guard startPoint != endPoint else {
         throw CurveError.invalidParameters

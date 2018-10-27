@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		374DFDC12184E4F500C2EBC2 /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */; };
+		374DFDC32184EDA800C2EBC2 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC22184EDA800C2EBC2 /* Playground.swift */; };
 		376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E069D2184715E00C39AFC /* AppDelegate.swift */; };
 		376E06A32184715E00C39AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A12184715E00C39AFC /* Main.storyboard */; };
 		376E06A52184715E00C39AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A42184715E00C39AFC /* Assets.xcassets */; };
 		376E06B32184715E00C39AFC /* AloeVeraCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06B22184715E00C39AFC /* AloeVeraCurveTests.swift */; };
 		376E06D32184729B00C39AFC /* LineCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D22184729B00C39AFC /* LineCurve.swift */; };
 		376E06D52184734300C39AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376E06D42184734300C39AFC /* LaunchScreen.storyboard */; };
-		376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D8218474E900C39AFC /* ExampleViewController.swift */; };
+		376E06D9218474E900C39AFC /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D8218474E900C39AFC /* DrawingViewController.swift */; };
 		376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DA2184751E00C39AFC /* ListViewController.swift */; };
-		376E06DD218475B600C39AFC /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DC218475B600C39AFC /* Example.swift */; };
+		376E06DD218475B600C39AFC /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DC218475B600C39AFC /* Curve.swift */; };
 		376E06DF2184841F00C39AFC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DE2184841F00C39AFC /* Errors.swift */; };
 		376E06E321848ED100C39AFC /* ParabolaCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06E221848ED100C39AFC /* ParabolaCurve.swift */; };
 		37AAEA5B2184BA4A004A1AB8 /* LinearBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AAEA5A2184BA4A004A1AB8 /* LinearBezierCurve.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezierCurve.swift; sourceTree = "<group>"; };
+		374DFDC22184EDA800C2EBC2 /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
 		376E069A2184715E00C39AFC /* AloeVeraCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AloeVeraCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376E069D2184715E00C39AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376E06A22184715E00C39AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,9 +47,9 @@
 		376E06B42184715E00C39AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		376E06D22184729B00C39AFC /* LineCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCurve.swift; sourceTree = "<group>"; };
 		376E06D42184734300C39AFC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		376E06D8218474E900C39AFC /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		376E06D8218474E900C39AFC /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		376E06DA2184751E00C39AFC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		376E06DC218475B600C39AFC /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		376E06DC218475B600C39AFC /* Curve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
 		376E06DE2184841F00C39AFC /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		376E06E221848ED100C39AFC /* ParabolaCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParabolaCurve.swift; sourceTree = "<group>"; };
 		37AAEA5A2184BA4A004A1AB8 /* LinearBezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearBezierCurve.swift; sourceTree = "<group>"; };
@@ -94,9 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				376E069D2184715E00C39AFC /* AppDelegate.swift */,
-				376E06DC218475B600C39AFC /* Example.swift */,
+				376E06DC218475B600C39AFC /* Curve.swift */,
+				374DFDC22184EDA800C2EBC2 /* Playground.swift */,
 				376E06DA2184751E00C39AFC /* ListViewController.swift */,
-				376E06D8218474E900C39AFC /* ExampleViewController.swift */,
+				376E06D8218474E900C39AFC /* DrawingViewController.swift */,
 				376E06A12184715E00C39AFC /* Main.storyboard */,
 				376E06D12184727500C39AFC /* sources */,
 				376E06BD2184718100C39AFC /* Supporting files */,
@@ -241,13 +244,14 @@
 				376E06D32184729B00C39AFC /* LineCurve.swift in Sources */,
 				374DFDC12184E4F500C2EBC2 /* CubicBezierCurve.swift in Sources */,
 				376E06E321848ED100C39AFC /* ParabolaCurve.swift in Sources */,
-				376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */,
+				374DFDC32184EDA800C2EBC2 /* Playground.swift in Sources */,
+				376E06D9218474E900C39AFC /* DrawingViewController.swift in Sources */,
 				37AAEA5D2184C458004A1AB8 /* QuadraticBezierCurve.swift in Sources */,
 				37AAEA5B2184BA4A004A1AB8 /* LinearBezierCurve.swift in Sources */,
 				376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */,
 				376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */,
 				376E06DF2184841F00C39AFC /* Errors.swift in Sources */,
-				376E06DD218475B600C39AFC /* Example.swift in Sources */,
+				376E06DD218475B600C39AFC /* Curve.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

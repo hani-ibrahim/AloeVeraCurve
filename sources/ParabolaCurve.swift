@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Parabola Curve `y = a x^2 + b x + c`
+/// Parabola Curve
 ///
 /// - Parameters:
 ///   - point1: point on the parabola

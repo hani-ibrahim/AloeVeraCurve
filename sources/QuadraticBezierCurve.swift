@@ -8,6 +8,15 @@
 
 import UIKit
 
+/// Quadratic Bézier Curve
+///
+/// - Parameters:
+///   - startPoint: start point on the curve
+///   - controlPoint: the control point of the curve
+///   - endPoint: end point on the curve
+/// - Returns: A function that takes `time` (0...1) and return the corresponding `point` on the curve
+/// - Throws:
+///   - invalidParameters: if the input points are the same
 public func quadraticBezierCurve(withStartPoint startPoint: CGPoint, controlPoint: CGPoint, endPoint: CGPoint) throws -> (_ time: CGFloat) -> CGPoint {
     guard startPoint != controlPoint && startPoint != endPoint else {
         throw CurveError.invalidParameters

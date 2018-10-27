@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Line Curve `y = m x + c`
+/// Line Curve
 ///
 /// - Parameters:
 ///   - point1: point on the line
