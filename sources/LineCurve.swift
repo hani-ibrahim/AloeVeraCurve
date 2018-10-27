@@ -1,5 +1,5 @@
 //
-//  LinearCurve.swift
+//  LineCurve.swift
 //  AloeVeraCurve
 //
 //  Created by Hani on 27.10.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public func linearCurveFor(point1: CGPoint, point2: CGPoint) throws -> (CGFloat) -> CGFloat {
+public func lineCurveFor(point1: CGPoint, point2: CGPoint) throws -> (CGFloat) -> CGFloat {
     guard point1.x != point2.x else {
         throw CurveError.verticalLineNotSupported
     }

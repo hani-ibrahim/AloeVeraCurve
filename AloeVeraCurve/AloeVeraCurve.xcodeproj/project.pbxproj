@@ -11,13 +11,13 @@
 		376E06A32184715E00C39AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A12184715E00C39AFC /* Main.storyboard */; };
 		376E06A52184715E00C39AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A42184715E00C39AFC /* Assets.xcassets */; };
 		376E06B32184715E00C39AFC /* AloeVeraCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06B22184715E00C39AFC /* AloeVeraCurveTests.swift */; };
-		376E06D32184729B00C39AFC /* LinearCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D22184729B00C39AFC /* LinearCurve.swift */; };
+		376E06D32184729B00C39AFC /* LineCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D22184729B00C39AFC /* LineCurve.swift */; };
 		376E06D52184734300C39AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376E06D42184734300C39AFC /* LaunchScreen.storyboard */; };
 		376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D8218474E900C39AFC /* ExampleViewController.swift */; };
 		376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DA2184751E00C39AFC /* ListViewController.swift */; };
 		376E06DD218475B600C39AFC /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DC218475B600C39AFC /* Example.swift */; };
 		376E06DF2184841F00C39AFC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DE2184841F00C39AFC /* Errors.swift */; };
-		376E06E321848ED100C39AFC /* QuadraticCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06E221848ED100C39AFC /* QuadraticCurve.swift */; };
+		376E06E321848ED100C39AFC /* ParabolaCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06E221848ED100C39AFC /* ParabolaCurve.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +39,13 @@
 		376E06AE2184715E00C39AFC /* AloeVeraCurveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AloeVeraCurveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		376E06B22184715E00C39AFC /* AloeVeraCurveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AloeVeraCurveTests.swift; sourceTree = "<group>"; };
 		376E06B42184715E00C39AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		376E06D22184729B00C39AFC /* LinearCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearCurve.swift; sourceTree = "<group>"; };
+		376E06D22184729B00C39AFC /* LineCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCurve.swift; sourceTree = "<group>"; };
 		376E06D42184734300C39AFC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376E06D8218474E900C39AFC /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		376E06DA2184751E00C39AFC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		376E06DC218475B600C39AFC /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		376E06DE2184841F00C39AFC /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		376E06E221848ED100C39AFC /* QuadraticCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticCurve.swift; sourceTree = "<group>"; };
+		376E06E221848ED100C39AFC /* ParabolaCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParabolaCurve.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				376E06DE2184841F00C39AFC /* Errors.swift */,
-				376E06D22184729B00C39AFC /* LinearCurve.swift */,
-				376E06E221848ED100C39AFC /* QuadraticCurve.swift */,
+				376E06D22184729B00C39AFC /* LineCurve.swift */,
+				376E06E221848ED100C39AFC /* ParabolaCurve.swift */,
 			);
 			name = sources;
 			path = ../../sources;
@@ -229,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				376E06D32184729B00C39AFC /* LinearCurve.swift in Sources */,
-				376E06E321848ED100C39AFC /* QuadraticCurve.swift in Sources */,
+				376E06D32184729B00C39AFC /* LineCurve.swift in Sources */,
+				376E06E321848ED100C39AFC /* ParabolaCurve.swift in Sources */,
 				376E06D9218474E900C39AFC /* ExampleViewController.swift in Sources */,
 				376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */,
 				376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */,

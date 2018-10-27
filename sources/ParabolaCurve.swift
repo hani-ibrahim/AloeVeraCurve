@@ -1,5 +1,5 @@
 //
-//  QuadraticCurve.swift
+//  ParabolaCurve.swift
 //  AloeVeraCurve
 //
 //  Created by Hani on 27.10.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public func quadraticCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (CGFloat) -> CGFloat {
+public func parabolaCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (CGFloat) -> CGFloat {
     guard point1.x != point2.x && point1.x != point3.x else {
         throw CurveError.quadraticAxisOfSymmetryIsNotVertical
     }

@@ -62,18 +62,18 @@ private extension ExampleViewController {
     
     func makeCurve() -> (CGFloat) -> CGFloat {
         switch example! {
-        case .linear: return makeLinearCurve()
-        case .quadratic: return makeQuadraticCurve()
+        case .linear: return makeLineCurve()
+        case .quadratic: return makeParabolaCurve()
         }
     }
     
-    func makeLinearCurve() -> (CGFloat) -> CGFloat {
-        return try! linearCurveFor(point1: CGPoint(x: 0, y: playgroundSize.height),
+    func makeLineCurve() -> (CGFloat) -> CGFloat {
+        return try! lineCurveFor(point1: CGPoint(x: 0, y: playgroundSize.height),
                                    point2: CGPoint(x: playgroundSize.width, y: 0))
     }
     
-    func makeQuadraticCurve() -> (CGFloat) -> CGFloat {
-        return try! quadraticCurveFor(point1: CGPoint(x: 0, y: 0),
+    func makeParabolaCurve() -> (CGFloat) -> CGFloat {
+        return try! parabolaCurveFor(point1: CGPoint(x: 0, y: 0),
                                       point2: CGPoint(x: playgroundSize.width / 2, y: playgroundSize.height),
                                       point3: CGPoint(x: playgroundSize.width, y: 0))
     }
