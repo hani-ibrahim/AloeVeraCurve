@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		374DFDC12184E4F500C2EBC2 /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */; };
 		374DFDC32184EDA800C2EBC2 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC22184EDA800C2EBC2 /* Playground.swift */; };
+		374DFDC52185011300C2EBC2 /* ArcCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC42185011300C2EBC2 /* ArcCurve.swift */; };
 		376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E069D2184715E00C39AFC /* AppDelegate.swift */; };
 		376E06A32184715E00C39AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A12184715E00C39AFC /* Main.storyboard */; };
 		376E06A52184715E00C39AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A42184715E00C39AFC /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezierCurve.swift; sourceTree = "<group>"; };
 		374DFDC22184EDA800C2EBC2 /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
+		374DFDC42185011300C2EBC2 /* ArcCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCurve.swift; sourceTree = "<group>"; };
 		376E069A2184715E00C39AFC /* AloeVeraCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AloeVeraCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376E069D2184715E00C39AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376E06A22184715E00C39AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				376E06DE2184841F00C39AFC /* Errors.swift */,
 				376E06D22184729B00C39AFC /* LineCurve.swift */,
 				376E06E221848ED100C39AFC /* ParabolaCurve.swift */,
+				374DFDC42185011300C2EBC2 /* ArcCurve.swift */,
 				37AAEA5A2184BA4A004A1AB8 /* LinearBezierCurve.swift */,
 				37AAEA5C2184C458004A1AB8 /* QuadraticBezierCurve.swift */,
 				374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */,
@@ -249,6 +252,7 @@
 				37AAEA5D2184C458004A1AB8 /* QuadraticBezierCurve.swift in Sources */,
 				37AAEA5B2184BA4A004A1AB8 /* LinearBezierCurve.swift in Sources */,
 				376E06DB2184751E00C39AFC /* ListViewController.swift in Sources */,
+				374DFDC52185011300C2EBC2 /* ArcCurve.swift in Sources */,
 				376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */,
 				376E06DF2184841F00C39AFC /* Errors.swift in Sources */,
 				376E06DD218475B600C39AFC /* Curve.swift in Sources */,

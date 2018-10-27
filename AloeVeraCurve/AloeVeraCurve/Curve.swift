@@ -9,8 +9,9 @@
 import UIKit
 
 enum Curve: String, CaseIterable {
-    case linear
-    case quadratic
+    case line
+    case parabola
+    case arc
     case linearBezierCurve
     case quadraticBezierCurve
     case cubicBezierCurve
@@ -23,8 +24,9 @@ extension Curve {
     
     var isTimeFunction: Bool {
         switch self {
-        case .linear: return false
-        case .quadratic: return false
+        case .line: return false
+        case .parabola: return false
+        case .arc: return true
         case .linearBezierCurve: return true
         case .quadraticBezierCurve: return true
         case .cubicBezierCurve: return true

@@ -18,8 +18,9 @@ struct Playground {
     
     func makeCurveFunction(for curve: Curve) -> (CGFloat) -> CGPoint {
         switch curve {
-        case .linear: return wrapNonPointFunction(makeLineCurve())
-        case .quadratic: return wrapNonPointFunction(makeParabolaCurve())
+        case .line: return wrapNonPointFunction(makeLineCurve())
+        case .parabola: return wrapNonPointFunction(makeParabolaCurve())
+        case .arc: return makeArcCurve()
         case .linearBezierCurve: return makeLinearBezierCurve()
         case .quadraticBezierCurve: return makeQuadraticBezierCurve()
         case .cubicBezierCurve: return makeCubicBezierCurve()
@@ -59,6 +60,12 @@ private extension Playground {
         return try! parabolaCurveFor(point1: CGPoint(x: 0, y: 0),
                                      point2: CGPoint(x: size.width / 2, y: size.height),
                                      point3: CGPoint(x: size.width, y: 0))
+    }
+    
+    func makeArcCurve() -> (CGFloat) -> CGPoint {
+        return arcCurve(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
+                        radius: size.width / 3,
+                        startAngle: 0, endAngle: .pi * 3 / 2)
     }
     
     func makeLinearBezierCurve() -> (CGFloat) -> CGPoint {

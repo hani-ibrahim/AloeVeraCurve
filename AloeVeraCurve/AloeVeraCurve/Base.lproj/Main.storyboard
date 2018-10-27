@@ -92,7 +92,7 @@
             </objects>
             <point key="canvasLocation" x="1953" y="133"/>
         </scene>
-        <!--Examples-->
+        <!--AloeVera Curves-->
         <scene sceneID="vPO-Sc-uxP">
             <objects>
                 <tableViewController id="H5M-CH-75M" customClass="ListViewController" customModule="AloeVeraCurve" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                             <outlet property="delegate" destination="H5M-CH-75M" id="vmq-Sp-Qks"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Examples" id="CFA-wr-1bU">
+                    <navigationItem key="navigationItem" title="AloeVera Curves" id="CFA-wr-1bU">
                         <barButtonItem key="backBarButtonItem" title=" " id="4Yd-qw-X71"/>
                     </navigationItem>
                 </tableViewController>
