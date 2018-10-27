@@ -10,6 +10,14 @@
 		374DFDC12184E4F500C2EBC2 /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */; };
 		374DFDC32184EDA800C2EBC2 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC22184EDA800C2EBC2 /* Playground.swift */; };
 		374DFDC52185011300C2EBC2 /* ArcCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC42185011300C2EBC2 /* ArcCurve.swift */; };
+		374DFDE821850B2900C2EBC2 /* AloeVeraCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = 374DFDE621850B2900C2EBC2 /* AloeVeraCurve.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		374DFDEC21850B3800C2EBC2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06DE2184841F00C39AFC /* Errors.swift */; };
+		374DFDED21850B3800C2EBC2 /* LineCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06D22184729B00C39AFC /* LineCurve.swift */; };
+		374DFDEE21850B3800C2EBC2 /* ParabolaCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E06E221848ED100C39AFC /* ParabolaCurve.swift */; };
+		374DFDEF21850B3800C2EBC2 /* ArcCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC42185011300C2EBC2 /* ArcCurve.swift */; };
+		374DFDF021850B3800C2EBC2 /* LinearBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AAEA5A2184BA4A004A1AB8 /* LinearBezierCurve.swift */; };
+		374DFDF121850B3800C2EBC2 /* QuadraticBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AAEA5C2184C458004A1AB8 /* QuadraticBezierCurve.swift */; };
+		374DFDF221850B3800C2EBC2 /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */; };
 		376E069E2184715E00C39AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E069D2184715E00C39AFC /* AppDelegate.swift */; };
 		376E06A32184715E00C39AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A12184715E00C39AFC /* Main.storyboard */; };
 		376E06A52184715E00C39AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376E06A42184715E00C39AFC /* Assets.xcassets */; };
@@ -39,7 +47,10 @@
 		374DFDC02184E4F500C2EBC2 /* CubicBezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezierCurve.swift; sourceTree = "<group>"; };
 		374DFDC22184EDA800C2EBC2 /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
 		374DFDC42185011300C2EBC2 /* ArcCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCurve.swift; sourceTree = "<group>"; };
-		376E069A2184715E00C39AFC /* AloeVeraCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AloeVeraCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		374DFDE421850B2900C2EBC2 /* AloeVeraCurve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AloeVeraCurve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		374DFDE621850B2900C2EBC2 /* AloeVeraCurve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AloeVeraCurve.h; sourceTree = "<group>"; };
+		374DFDE721850B2900C2EBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376E069A2184715E00C39AFC /* AloeVeraCurveExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AloeVeraCurveExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376E069D2184715E00C39AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376E06A22184715E00C39AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		376E06A42184715E00C39AFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		374DFDE121850B2900C2EBC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		376E06972184715E00C39AFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,11 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374DFDE521850B2900C2EBC2 /* AloeVeraCurve */ = {
+			isa = PBXGroup;
+			children = (
+				374DFDE621850B2900C2EBC2 /* AloeVeraCurve.h */,
+				374DFDE721850B2900C2EBC2 /* Info.plist */,
+			);
+			path = AloeVeraCurve;
+			sourceTree = "<group>";
+		};
 		376E06912184715E00C39AFC = {
 			isa = PBXGroup;
 			children = (
 				376E069C2184715E00C39AFC /* AloeVeraCurve */,
 				376E06B12184715E00C39AFC /* AloeVeraCurveTests */,
+				374DFDE521850B2900C2EBC2 /* AloeVeraCurve */,
 				376E069B2184715E00C39AFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +116,9 @@
 		376E069B2184715E00C39AFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376E069A2184715E00C39AFC /* AloeVeraCurve.app */,
+				376E069A2184715E00C39AFC /* AloeVeraCurveExample.app */,
 				376E06AE2184715E00C39AFC /* AloeVeraCurveTests.xctest */,
+				374DFDE421850B2900C2EBC2 /* AloeVeraCurve.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,10 +174,39 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		374DFDDF21850B2900C2EBC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374DFDE821850B2900C2EBC2 /* AloeVeraCurve.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		376E06992184715E00C39AFC /* AloeVeraCurve */ = {
+		374DFDE321850B2900C2EBC2 /* AloeVeraCurve */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376E06B72184715E00C39AFC /* Build configuration list for PBXNativeTarget "AloeVeraCurve" */;
+			buildConfigurationList = 374DFDE921850B2900C2EBC2 /* Build configuration list for PBXNativeTarget "AloeVeraCurve" */;
+			buildPhases = (
+				374DFDDF21850B2900C2EBC2 /* Headers */,
+				374DFDE021850B2900C2EBC2 /* Sources */,
+				374DFDE121850B2900C2EBC2 /* Frameworks */,
+				374DFDE221850B2900C2EBC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AloeVeraCurve;
+			productName = AloeVeraCurve;
+			productReference = 374DFDE421850B2900C2EBC2 /* AloeVeraCurve.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		376E06992184715E00C39AFC /* AloeVeraCurveExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376E06B72184715E00C39AFC /* Build configuration list for PBXNativeTarget "AloeVeraCurveExample" */;
 			buildPhases = (
 				376E06962184715E00C39AFC /* Sources */,
 				376E06972184715E00C39AFC /* Frameworks */,
@@ -158,9 +216,9 @@
 			);
 			dependencies = (
 			);
-			name = AloeVeraCurve;
+			name = AloeVeraCurveExample;
 			productName = AloeVeraCurve;
-			productReference = 376E069A2184715E00C39AFC /* AloeVeraCurve.app */;
+			productReference = 376E069A2184715E00C39AFC /* AloeVeraCurveExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376E06AD2184715E00C39AFC /* AloeVeraCurveTests */ = {
@@ -191,6 +249,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Hani;
 				TargetAttributes = {
+					374DFDE321850B2900C2EBC2 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					376E06992184715E00C39AFC = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -213,13 +274,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376E06992184715E00C39AFC /* AloeVeraCurve */,
+				376E06992184715E00C39AFC /* AloeVeraCurveExample */,
 				376E06AD2184715E00C39AFC /* AloeVeraCurveTests */,
+				374DFDE321850B2900C2EBC2 /* AloeVeraCurve */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		374DFDE221850B2900C2EBC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		376E06982184715E00C39AFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +309,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		374DFDE021850B2900C2EBC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374DFDEC21850B3800C2EBC2 /* Errors.swift in Sources */,
+				374DFDED21850B3800C2EBC2 /* LineCurve.swift in Sources */,
+				374DFDEE21850B3800C2EBC2 /* ParabolaCurve.swift in Sources */,
+				374DFDEF21850B3800C2EBC2 /* ArcCurve.swift in Sources */,
+				374DFDF021850B3800C2EBC2 /* LinearBezierCurve.swift in Sources */,
+				374DFDF121850B3800C2EBC2 /* QuadraticBezierCurve.swift in Sources */,
+				374DFDF221850B3800C2EBC2 /* CubicBezierCurve.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		376E06962184715E00C39AFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,7 +355,7 @@
 /* Begin PBXTargetDependency section */
 		376E06B02184715E00C39AFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376E06992184715E00C39AFC /* AloeVeraCurve */;
+			target = 376E06992184715E00C39AFC /* AloeVeraCurveExample */;
 			targetProxy = 376E06AF2184715E00C39AFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -289,6 +372,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		374DFDEA21850B2900C2EBC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AloeVeraCurve/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hani.AloeVeraCurve;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		374DFDEB21850B2900C2EBC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AloeVeraCurve/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hani.AloeVeraCurve;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		376E06B52184715E00C39AFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +623,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		374DFDE921850B2900C2EBC2 /* Build configuration list for PBXNativeTarget "AloeVeraCurve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374DFDEA21850B2900C2EBC2 /* Debug */,
+				374DFDEB21850B2900C2EBC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		376E06952184715E00C39AFC /* Build configuration list for PBXProject "AloeVeraCurve" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -493,7 +641,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376E06B72184715E00C39AFC /* Build configuration list for PBXNativeTarget "AloeVeraCurve" */ = {
+		376E06B72184715E00C39AFC /* Build configuration list for PBXNativeTarget "AloeVeraCurveExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376E06B82184715E00C39AFC /* Debug */,
