@@ -28,11 +28,13 @@ final class LengthCalculatorTests: XCTestCase {
             return CGPoint(x: time, y: time * 2)
         }
         
-        let totalLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 1, precision: 0.01)
-        XCTAssertEqual(totalLength, sqrt(5))
+        let precision: CGFloat = 0.01
         
-        let halfLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 0.5, precision: 0.01)
-        XCTAssertEqual(halfLength, sqrt(5) / 2)
+        let totalLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 1, precision: precision)
+        XCTAssertLessThan(abs(totalLength - sqrt(5)), precision)
+        
+        let halfLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 0.5, precision: precision)
+        XCTAssertLessThan(abs(halfLength - sqrt(5) / 2), precision)
     }
     
     func testCalculateCurveLengthWithHalfCircleCurve() {
@@ -42,10 +44,10 @@ final class LengthCalculatorTests: XCTestCase {
         
         let precision: CGFloat = 0.01
         
-        let totalLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 1, precision: 0.01)
+        let totalLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 1, precision: precision)
         XCTAssertLessThan(abs(totalLength - .pi), precision)
         
-        let halfLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 0.5, precision: 0.01)
+        let halfLength = calculateCurveLength(with: pointEvaluator, fromTime: 0, toTime: 0.5, precision: precision)
         XCTAssertLessThan(abs(halfLength - .pi / 2), precision)
     }
     

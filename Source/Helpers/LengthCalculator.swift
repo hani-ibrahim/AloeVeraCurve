@@ -13,12 +13,11 @@ func caluclateLineLength(with pointEvaluator: Curve.PointEvaluator, fromTime: CG
     let p2 = pointEvaluator(toTime)
     let dy = p2.y - p1.y
     let dx = p2.x - p1.x
-//    print("fromTime: \(fromTime), toTime: \(toTime)")
     return sqrt(dy * dy + dx * dx)
 }
 
 func calculateCurveLength(with pointEvaluator: Curve.PointEvaluator, fromTime: CGFloat, toTime: CGFloat, precision: CGFloat = 0.01) -> CGFloat {
-    var divisions = 1
+    var divisions = 32
     var finalLength: CGFloat = 0
     var currentLength: CGFloat = 0
     var delta: [CGFloat] = [1, 0]
@@ -27,20 +26,20 @@ func calculateCurveLength(with pointEvaluator: Curve.PointEvaluator, fromTime: C
     repeat {
         finalLength = currentLength
         currentLength = 0
-//        print("\n\nIteration: \(iteration)")
         let step = (toTime - fromTime) / CGFloat(divisions)
+        
         for i in 0..<divisions {
             let iFloat = CGFloat(i)
             currentLength += caluclateLineLength(with: pointEvaluator, fromTime: fromTime + step * iFloat, toTime: fromTime + step * (iFloat + 1))
         }
-//        print("currentLength: \(currentLength)")
+        
         delta.insert(abs(finalLength - currentLength), at: 0)
         divisions *= 2
         iteration += 1
         
-    } while abs(delta[2] - delta[1]) > precision && abs(delta[1] - delta[0]) > precision
-//    print("delta: \(delta)")
-    print("Time: \(Date().timeIntervalSince(startDate))")
+    } while delta[0] > delta[1] || delta[1] > delta[2] || delta[2] > precision
+    let endTime = Date().timeIntervalSince(startDate)
+    print("iteration: \(iteration), divisions: \(divisions), Time: \(endTime), finalLength: \(finalLength)")
     return finalLength
 }
 

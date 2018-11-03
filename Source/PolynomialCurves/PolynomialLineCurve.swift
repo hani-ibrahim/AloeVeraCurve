@@ -1,5 +1,5 @@
 //
-//  LineCurve.swift
+//  PolynomialLineCurve.swift
 //  AloeVeraCurve
 //
 //  Created by Hani on 27.10.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Line Curve
+/// Polynomial Line Curve
 ///
 /// - Parameters:
 ///   - point1: point on the line
@@ -16,7 +16,7 @@ import UIKit
 /// - Returns: A function that takes `x` and return the corresponding `y` on the line
 /// - Throws:
 ///   - invalidParameters: if the input points have the same x poitions
-public func lineCurveFor(point1: CGPoint, point2: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
+public func polynomialLineCurveFor(point1: CGPoint, point2: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
     guard point1.x != point2.x else {
         throw CurveError.invalidParameters
     }

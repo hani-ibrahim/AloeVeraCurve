@@ -10,4 +10,5 @@ import Foundation
 
 public enum CurveError: Error {
     case invalidParameters
+    case unsupported
 }

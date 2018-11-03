@@ -1,5 +1,5 @@
 //
-//  ParabolaCurve.swift
+//  PolynomialParabolaCurve.swift
 //  AloeVeraCurve
 //
 //  Created by Hani on 27.10.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Parabola Curve
+/// Polynomial Parabola Curve
 ///
 /// - Parameters:
 ///   - point1: point on the parabola
@@ -17,7 +17,7 @@ import UIKit
 /// - Returns: A function that takes `x` and return the corresponding `y` on the parabola
 /// - Throws:
 ///   - invalidParameters: if the input points have the same x poitions
-public func parabolaCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
+public func polynomialParabolaCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
     guard point1.x != point2.x && point1.x != point3.x else {
         throw CurveError.invalidParameters
     }

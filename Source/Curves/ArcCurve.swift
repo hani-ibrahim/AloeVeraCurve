@@ -15,15 +15,29 @@ import UIKit
 ///   - radius: radius of the circle
 ///   - startAngle: start angle in radian
 ///   - endAngle: end andle in radian
-/// - Returns: A function that takes `time` (0...1) and return the corresponding `point` on the arc
-public func arcCurve(withCenter center: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat) -> (_ time: CGFloat) -> CGPoint {
+///   - clockwise: direction of the Arc
+/// - Returns: `Curve`
+public func arcCurve(withCenter center: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, clockwise: Bool) -> Curve {
     let m = endAngle - startAngle
     let c = startAngle
+    let lengthCoffeinet = 2 * .pi * radius * m
     
-    return { time in
+    let pointEvaluator: (CGFloat) -> CGPoint = { time in
         let angle = m * time + c
         let x = center.x + radius * cos(angle)
         let y = center.y + radius * sin(angle)
         return CGPoint(x: x, y: y)
     }
+    
+    let lengthCalculator: (CGFloat, CGFloat, CGFloat) -> CGFloat = { fromTime, toTime, precision in
+        return lengthCoffeinet * (toTime - fromTime)
+    }
+    
+    let cgPathMaker: () -> CGPath = {
+        let path = CGMutablePath()
+        path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: clockwise)
+        return path
+    }
+    
+    return Curve(pointEvaluator: pointEvaluator, lengthCalculator: lengthCalculator, cgPathMaker: cgPathMaker)
 }
