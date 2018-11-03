@@ -21,8 +21,7 @@ func calculateCurveLength(with pointEvaluator: Curve.PointEvaluator, fromTime: C
     var finalLength: CGFloat = 0
     var currentLength: CGFloat = 0
     var delta: [CGFloat] = [1, 0]
-    var iteration = 1
-    let startDate = Date()
+    
     repeat {
         finalLength = currentLength
         currentLength = 0
@@ -35,11 +34,8 @@ func calculateCurveLength(with pointEvaluator: Curve.PointEvaluator, fromTime: C
         
         delta.insert(abs(finalLength - currentLength), at: 0)
         divisions *= 2
-        iteration += 1
-        
-    } while delta[0] > delta[1] || delta[1] > delta[2] || delta[2] > precision
-    let endTime = Date().timeIntervalSince(startDate)
-    print("iteration: \(iteration), divisions: \(divisions), Time: \(endTime), finalLength: \(finalLength)")
+    } while delta[0] > delta[1] || delta[1] > delta[2] || delta[2] > precision // Make sure when the last three iterations are close to each other
+    
     return finalLength
 }
 
