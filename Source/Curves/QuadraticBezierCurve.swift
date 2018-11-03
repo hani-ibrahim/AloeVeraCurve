@@ -43,7 +43,7 @@ public func quadraticBezierCurve(withStartPoint startPoint: CGPoint, controlPoin
     }
     
     let lengthCalculator: (CGFloat, CGFloat, CGFloat) -> CGFloat = { fromTime, toTime, precision in
-        return calculateLength(with: pointEvaluator, fromTime: fromTime, toTime: toTime, precision: precision)
+        return calculateCurveLength(with: pointEvaluator, fromTime: fromTime, toTime: toTime, precision: precision)
     }
     
     let cgPathMaker: () -> CGPath = {

@@ -48,7 +48,7 @@ public func cubicBezierCurve(withStartPoint startPoint: CGPoint, controlPoint1: 
     }
     
     let lengthCalculator: (CGFloat, CGFloat, CGFloat) -> CGFloat = { fromTime, toTime, precision in
-        return calculateLength(with: pointEvaluator, fromTime: fromTime, toTime: toTime, precision: precision)
+        return calculateCurveLength(with: pointEvaluator, fromTime: fromTime, toTime: toTime, precision: precision)
     }
     
     let cgPathMaker: () -> CGPath = {

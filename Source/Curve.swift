@@ -9,11 +9,25 @@
 import Foundation
 
 public struct Curve {
-    public typealias PointEvaluator = (_ time: CGFloat) -> CGPoint
-    public typealias LengthCalculator = (_ fromTime: CGFloat, _ toTime: CGFloat, _ precision: CGFloat) -> CGFloat
-    public typealias CGPathMaker = () -> CGPath
+    typealias PointEvaluator = (_ time: CGFloat) -> CGPoint
+    typealias LengthCalculator = (_ fromTime: CGFloat, _ toTime: CGFloat, _ precision: CGFloat) -> CGFloat
+    typealias CGPathMaker = () -> CGPath
     
-    public let pointEvaluator: PointEvaluator
-    public let lengthCalculator: LengthCalculator
-    public let cgPathMaker: CGPathMaker
+    let pointEvaluator: PointEvaluator
+    let lengthCalculator: LengthCalculator
+    let cgPathMaker: CGPathMaker
+}
+
+public extension Curve {
+    func evaluatePoint(atTime time: CGFloat) -> CGPoint {
+        return pointEvaluator(time)
+    }
+    
+    func calculateLength(fromTime: CGFloat, toTime: CGFloat, withPrecision precision: CGFloat = 0.01) -> CGFloat {
+        return lengthCalculator(fromTime, toTime, precision)
+    }
+    
+    func makeCGPath() -> CGPath {
+        return cgPathMaker()
+    }
 }

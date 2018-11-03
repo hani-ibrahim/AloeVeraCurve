@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37DE56BE218DD3B9007134A8 /* AloeVeraCurve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE56B4218DD3B9007134A8 /* AloeVeraCurve.framework */; };
-		37DE56C3218DD3B9007134A8 /* AloeVeraCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56C2218DD3B9007134A8 /* AloeVeraCurveTests.swift */; };
 		37DE56C5218DD3B9007134A8 /* AloeVeraCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DE56B7218DD3B9007134A8 /* AloeVeraCurve.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37DE56DC218DD408007134A8 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D0218DD408007134A8 /* Curve.swift */; };
 		37DE56DD218DD408007134A8 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D1218DD408007134A8 /* Errors.swift */; };
@@ -19,6 +18,8 @@
 		37DE56E2218DD408007134A8 /* ArcCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D8218DD408007134A8 /* ArcCurve.swift */; };
 		37DE56E3218DD408007134A8 /* ParabolaCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56DA218DD408007134A8 /* ParabolaCurve.swift */; };
 		37DE56E4218DD408007134A8 /* LineCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56DB218DD408007134A8 /* LineCurve.swift */; };
+		37DE56E6218DD5C8007134A8 /* LengthCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56E5218DD5C8007134A8 /* LengthCalculatorTests.swift */; };
+		37DE56E8218DE239007134A8 /* BezierCurvesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56E7218DE239007134A8 /* BezierCurvesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 		37DE56B7218DD3B9007134A8 /* AloeVeraCurve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AloeVeraCurve.h; sourceTree = "<group>"; };
 		37DE56B8218DD3B9007134A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DE56BD218DD3B9007134A8 /* AloeVeraCurveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AloeVeraCurveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37DE56C2218DD3B9007134A8 /* AloeVeraCurveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AloeVeraCurveTests.swift; sourceTree = "<group>"; };
 		37DE56C4218DD3B9007134A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DE56D0218DD408007134A8 /* Curve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
 		37DE56D1218DD408007134A8 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		37DE56D8218DD408007134A8 /* ArcCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcCurve.swift; sourceTree = "<group>"; };
 		37DE56DA218DD408007134A8 /* ParabolaCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParabolaCurve.swift; sourceTree = "<group>"; };
 		37DE56DB218DD408007134A8 /* LineCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineCurve.swift; sourceTree = "<group>"; };
+		37DE56E5218DD5C8007134A8 /* LengthCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthCalculatorTests.swift; sourceTree = "<group>"; };
+		37DE56E7218DE239007134A8 /* BezierCurvesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurvesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,8 @@
 		37DE56C1218DD3B9007134A8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				37DE56C2218DD3B9007134A8 /* AloeVeraCurveTests.swift */,
+				37DE56E5218DD5C8007134A8 /* LengthCalculatorTests.swift */,
+				37DE56E7218DE239007134A8 /* BezierCurvesTests.swift */,
 				37DE56CF218DD3F6007134A8 /* Supporting Files */,
 			);
 			path = Tests;
@@ -219,6 +222,7 @@
 					};
 					37DE56BC218DD3B9007134A8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -278,7 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DE56C3218DD3B9007134A8 /* AloeVeraCurveTests.swift in Sources */,
+				37DE56E8218DE239007134A8 /* BezierCurvesTests.swift in Sources */,
+				37DE56E6218DD5C8007134A8 /* LengthCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A348U4PQP3;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -482,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hani.AloeVeraCurveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A348U4PQP3;
 				INFOPLIST_FILE = Tests/Info.plist;
