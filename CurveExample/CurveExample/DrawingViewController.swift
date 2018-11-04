@@ -1,6 +1,6 @@
 //
 //  DrawingViewController.swift
-//  AloeVeraCurve
+//  CurveExample
 //
 //  Created by Hani on 27.10.18.
 //  Copyright © 2018 Hani. All rights reserved.
@@ -38,11 +38,10 @@ final class DrawingViewController: UIViewController {
             return
         }
         
-        let playground = Playground(size: containerView.frame.size)
-        curve = playground.makeCurve(for: sampleCurve)
+        configureCurve(size: containerView.frame.size)
         configurePath()
-        updateCircle(forProgress: 0)
         updateLength()
+        updateCircle(forProgress: 0)
     }
     
     @IBAction private func sliderValueChanged(slider: UISlider) {
@@ -51,15 +50,30 @@ final class DrawingViewController: UIViewController {
 }
 
 private extension DrawingViewController {
-    func updateCircle(forProgress progress: CGFloat) {
-        let position = curve.evaluatePoint(atTime: progress)
-        circleView.transform = CGAffineTransform(translationX: position.x, y: position.y)
-        progressLabel.text = String(format: "Progress: %.f %%", progress * 100)
-    }
-    
-    func updateLength() {
-        let length = curve.calculateLength(fromTime: 0, toTime: 1)
-        lengthLabel.text = String(format: "Curve Length: %.2f pt", length)
+    func configureCurve(size: CGSize) {
+        switch sampleCurve! {
+        case .linearBezierCurve:
+            curve = try! linearBezierCurve(withStartPoint: CGPoint(x: 0, y: size.height),
+                                           endPoint: CGPoint(x: size.width, y: 0))
+        case .quadraticBezierCurve:
+            curve = try! quadraticBezierCurve(withStartPoint: CGPoint(x: 0, y: size.height),
+                                              controlPoint: CGPoint(x: size.width, y: size.height),
+                                              endPoint: CGPoint(x: size.width, y: 0))
+        case .cubicBezierCurve:
+            curve = try! cubicBezierCurve(withStartPoint: CGPoint(x: 0, y: size.height),
+                                          controlPoint1: CGPoint(x: size.width / 4, y: -size.height),
+                                          controlPoint2: CGPoint(x: size.width * 3 / 4, y: size.height * 2),
+                                          endPoint: CGPoint(x: size.width, y: 0))
+        case .arc:
+            curve = arcCurve(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
+                             radius: size.width / 3,
+                             startAngle: 0, endAngle: .pi * 3 / 2,
+                             clockwise: true)
+        case .parabola:
+            curve = try! parabolaCurve(startPoint: CGPoint(x: 0, y: 0),
+                                       vertexYPosition: size.height,
+                                       endPoint: CGPoint(x: size.width, y: 0))
+        }
     }
     
     func configurePath() {
@@ -70,5 +84,16 @@ private extension DrawingViewController {
         pathLayer.strokeColor = UIColor.black.withAlphaComponent(0.1).cgColor
         pathLayer.fillColor = UIColor.clear.cgColor
         containerView.layer.addSublayer(pathLayer)
+    }
+    
+    func updateLength() {
+        let length = curve.calculateLength(fromTime: 0, toTime: 1)
+        lengthLabel.text = String(format: "Curve Length: %.2f pt", length)
+    }
+    
+    func updateCircle(forProgress progress: CGFloat) {
+        let position = curve.evaluatePoint(atTime: progress)
+        circleView.transform = CGAffineTransform(translationX: position.x, y: position.y)
+        progressLabel.text = String(format: "Progress: %.f %%", progress * 100)
     }
 }

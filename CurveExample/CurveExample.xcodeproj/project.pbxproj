@@ -11,12 +11,12 @@
 		37DE56FC218DEC66007134A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DE56FA218DEC66007134A8 /* Main.storyboard */; };
 		37DE56FE218DEC66007134A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DE56FD218DEC66007134A8 /* Assets.xcassets */; };
 		37DE5701218DEC66007134A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DE56FF218DEC66007134A8 /* LaunchScreen.storyboard */; };
-		37DF0883218E064800003391 /* SampleCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF087F218E064800003391 /* SampleCurve.swift */; };
+		37DF0883218E064800003391 /* SampleCurves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF087F218E064800003391 /* SampleCurves.swift */; };
 		37DF0884218E064800003391 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF0880218E064800003391 /* DrawingViewController.swift */; };
 		37DF0885218E064800003391 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF0881218E064800003391 /* ListViewController.swift */; };
-		37DF0886218E064800003391 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF0882218E064800003391 /* Playground.swift */; };
 		37DF089C218E095F00003391 /* AloeVeraCurve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF0897218E06AC00003391 /* AloeVeraCurve.framework */; };
 		37DF089D218E095F00003391 /* AloeVeraCurve.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF0897218E06AC00003391 /* AloeVeraCurve.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37DF08AB218E5E0500003391 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF08AA218E5E0500003391 /* AnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,11 +71,11 @@
 		37DE56FD218DEC66007134A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DE5700218DEC66007134A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37DE5702218DEC66007134A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37DF087F218E064800003391 /* SampleCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCurve.swift; sourceTree = "<group>"; };
+		37DF087F218E064800003391 /* SampleCurves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCurves.swift; sourceTree = "<group>"; };
 		37DF0880218E064800003391 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		37DF0881218E064800003391 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		37DF0882218E064800003391 /* Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
 		37DF0891218E06AB00003391 /* AloeVeraCurve.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AloeVeraCurve.xcodeproj; path = ../AloeVeraCurve.xcodeproj; sourceTree = "<group>"; };
+		37DF08AA218E5E0500003391 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 				37DE56F6218DEC66007134A8 /* AppDelegate.swift */,
 				37DF0881218E064800003391 /* ListViewController.swift */,
 				37DF0880218E064800003391 /* DrawingViewController.swift */,
-				37DF087F218E064800003391 /* SampleCurve.swift */,
-				37DF0882218E064800003391 /* Playground.swift */,
+				37DF08AA218E5E0500003391 /* AnimationViewController.swift */,
+				37DF087F218E064800003391 /* SampleCurves.swift */,
 				37DE56FA218DEC66007134A8 /* Main.storyboard */,
 				37DF087E218E05F700003391 /* Supporting Files */,
 			);
@@ -238,10 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DE56F7218DEC66007134A8 /* AppDelegate.swift in Sources */,
-				37DF0886218E064800003391 /* Playground.swift in Sources */,
 				37DF0884218E064800003391 /* DrawingViewController.swift in Sources */,
 				37DF0885218E064800003391 /* ListViewController.swift in Sources */,
-				37DF0883218E064800003391 /* SampleCurve.swift in Sources */,
+				37DF08AB218E5E0500003391 /* AnimationViewController.swift in Sources */,
+				37DF0883218E064800003391 /* SampleCurves.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A348U4PQP3;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = CurveExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -423,6 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A348U4PQP3;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = CurveExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

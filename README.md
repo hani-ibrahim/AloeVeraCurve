@@ -1,9 +1,10 @@
-# AloeVeraCurve
+<p align="center">
+<img width="500" height="500" src="Resources/AloeVera.jpg">
+</p>
 
-Better handling of curves ❤️
+# **Polynomial Curves**
 
-## **Polynomial Curves**
-### **Line Curve**
+## **Line Curve**
 
 Create a line curve function with any two points on it and get the `y` coordinate at any given `x`
 
@@ -16,7 +17,7 @@ print(curve(4)) // gives 4
 print(curve(-1)) // gives -6
 ```
 
-### **Parabola Curve**
+## **Parabola Curve**
 
 Create a parabola curve function with any three points on it and get the `y` coordinate at any given `x`
 

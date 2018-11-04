@@ -1,6 +1,6 @@
 //
 //  Curve.swift
-//  AloeVeraCurve
+//  CurveExample
 //
 //  Created by Hani on 27.10.18.
 //  Copyright © 2018 Hani. All rights reserved.
@@ -17,6 +17,17 @@ enum SampleCurve: String, CaseIterable {
 }
 
 extension SampleCurve {
+    var title: String {
+        return rawValue.titlecased()
+    }
+}
+
+enum SamplePolynomialCurve: String, CaseIterable {
+    case line
+    case parabola
+}
+
+extension SamplePolynomialCurve {
     var title: String {
         return rawValue.titlecased()
     }
