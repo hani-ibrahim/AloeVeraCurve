@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,35 +15,23 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="900" verticalCompressionResistancePriority="900" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x19-bu-Eph">
-                                <rect key="frame" x="58" y="30" width="204.5" height="205"/>
-                                <string key="text">AloeVera
-Curves</string>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="78"/>
-                                <color key="textColor" red="0.41106212139129639" green="0.54010921716690063" blue="0.24655061960220337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AloeVera" translatesAutoresizingMaskIntoConstraints="NO" id="81b-ZQ-fv0">
-                                <rect key="frame" x="57.5" y="275" width="205" height="205"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AloeVera" translatesAutoresizingMaskIntoConstraints="NO" id="lFW-WJ-2wd">
+                                <rect key="frame" x="20" y="157.33333333333337" width="335" height="335"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="81b-ZQ-fv0" secondAttribute="height" multiplier="1:1" id="mAW-o4-7Zh"/>
+                                    <constraint firstAttribute="width" secondItem="lFW-WJ-2wd" secondAttribute="height" multiplier="1:1" id="CeZ-eX-nDz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x19-bu-Eph" secondAttribute="trailing" constant="10" id="Acr-va-pLF"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="81b-ZQ-fv0" secondAttribute="bottom" id="AdE-kc-95b"/>
-                            <constraint firstItem="x19-bu-Eph" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HIW-Pm-oKx"/>
-                            <constraint firstItem="81b-ZQ-fv0" firstAttribute="height" secondItem="x19-bu-Eph" secondAttribute="height" id="IaW-Wg-1gW"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="81b-ZQ-fv0" secondAttribute="trailing" constant="20" id="JPg-du-HH1"/>
-                            <constraint firstItem="81b-ZQ-fv0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PVH-7d-5jr"/>
-                            <constraint firstItem="81b-ZQ-fv0" firstAttribute="top" secondItem="x19-bu-Eph" secondAttribute="bottom" constant="40" id="kWw-iA-vSM"/>
-                            <constraint firstItem="81b-ZQ-fv0" firstAttribute="width" relation="greaterThanOrEqual" secondItem="x19-bu-Eph" secondAttribute="width" id="pjC-di-KcQ"/>
-                            <constraint firstItem="x19-bu-Eph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zpD-uj-Jxa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lFW-WJ-2wd" secondAttribute="trailing" constant="20" id="4QQ-vJ-ihD"/>
+                            <constraint firstItem="lFW-WJ-2wd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GmK-gm-ckU"/>
+                            <constraint firstItem="lFW-WJ-2wd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HtB-2h-kZk"/>
+                            <constraint firstItem="lFW-WJ-2wd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.8" id="Uf6-RD-xkF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lFW-WJ-2wd" secondAttribute="bottom" constant="20" id="zvN-F5-hie"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,6 +42,6 @@ Curves</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AloeVera" width="1024" height="1024"/>
+        <image name="AloeVera" width="1000" height="1000"/>
     </resources>
 </document>

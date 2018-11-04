@@ -16,7 +16,7 @@
   - Arc Curve
   - Parabola Curve
 
-# **Curves**
+# **Curve**
 
 `Curve` is a struct that has 3 main functions to help dealing with curves, it works on Time Curves where `X` & `Y` are both function in time
 ```swift
