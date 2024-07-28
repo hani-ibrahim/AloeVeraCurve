@@ -16,10 +16,10 @@ final class LengthCalculatorTests: XCTestCase {
             return CGPoint(x: time, y: time * 2)
         }
         
-        let totalLength = caluclateLineLength(with: pointEvaluator, fromTime: 0, toTime: 1)
+        let totalLength = calculateLineLength(with: pointEvaluator, fromTime: 0, toTime: 1)
         XCTAssertEqual(totalLength, sqrt(5))
         
-        let halfLength = caluclateLineLength(with: pointEvaluator, fromTime: 0, toTime: 0.5)
+        let halfLength = calculateLineLength(with: pointEvaluator, fromTime: 0, toTime: 0.5)
         XCTAssertEqual(halfLength, sqrt(5) / 2)
     }
     

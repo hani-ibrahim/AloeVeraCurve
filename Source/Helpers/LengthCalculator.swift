@@ -8,7 +8,7 @@
 
 import Foundation
 
-func caluclateLineLength(with pointEvaluator: Curve.PointEvaluator, fromTime: CGFloat, toTime: CGFloat) -> CGFloat {
+func calculateLineLength(with pointEvaluator: Curve.PointEvaluator, fromTime: CGFloat, toTime: CGFloat) -> CGFloat {
     let p1 = pointEvaluator(fromTime)
     let p2 = pointEvaluator(toTime)
     let dy = p2.y - p1.y
@@ -29,7 +29,7 @@ func calculateCurveLength(with pointEvaluator: Curve.PointEvaluator, fromTime: C
         
         for i in 0..<divisions {
             let iFloat = CGFloat(i)
-            currentLength += caluclateLineLength(with: pointEvaluator, fromTime: fromTime + step * iFloat, toTime: fromTime + step * (iFloat + 1))
+            currentLength += calculateLineLength(with: pointEvaluator, fromTime: fromTime + step * iFloat, toTime: fromTime + step * (iFloat + 1))
         }
         
         delta.insert(abs(finalLength - currentLength), at: 0)

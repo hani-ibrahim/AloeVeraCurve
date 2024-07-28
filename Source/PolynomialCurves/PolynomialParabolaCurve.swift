@@ -12,22 +12,22 @@ import UIKit
 ///
 /// - Parameters:
 ///   - point1: point on the parabola
-///   - point2: anohter point on the parabola
-///   - point3: anohter point on the parabola
+///   - point2: another point on the parabola
+///   - point3: another point on the parabola
 /// - Returns: A function that takes `x` and return the corresponding `y` on the parabola
 /// - Throws:
-///   - invalidParameters: if the input points have the same x poitions
-public func polynomialParabolaCurveFor(point1: CGPoint, point2: CGPoint, point3: CGPoint) throws -> (_ x: CGFloat) -> CGFloat {
-    guard point1.x != point2.x && point1.x != point3.x else {
+///   - invalidParameters: if the input points have the same x positions
+public func polynomialParabolaCurveFor(point1: CurvePoint, point2: CurvePoint, point3: CurvePoint) throws -> (_ x: CGFloat) -> CGFloat {
+    guard point1.input != point2.input && point1.input != point3.input else {
         throw CurveError.invalidParameters
     }
     
-    let x1 = point1.x
-    let x2 = point2.x
-    let x3 = point3.x
-    let y1 = point1.y
-    let y2 = point2.y
-    let y3 = point3.y
+    let x1 = point1.input
+    let x2 = point2.input
+    let x3 = point3.input
+    let y1 = point1.output
+    let y2 = point2.output
+    let y3 = point3.output
     
     let x21 = x2 - x1
     let x31 = x3 - x1

@@ -38,7 +38,7 @@ public func linearBezierCurve(withStartPoint startPoint: CGPoint, endPoint: CGPo
     }
     
     let lengthCalculator: (CGFloat, CGFloat, CGFloat) -> CGFloat = { fromTime, toTime, _ in
-        return caluclateLineLength(with: pointEvaluator, fromTime: fromTime, toTime: toTime)
+        return calculateLineLength(with: pointEvaluator, fromTime: fromTime, toTime: toTime)
     }
     
     let cgPathMaker: () -> CGPath = {

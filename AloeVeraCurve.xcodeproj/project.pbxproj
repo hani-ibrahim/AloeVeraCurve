@@ -10,7 +10,6 @@
 		37DE56BE218DD3B9007134A8 /* AloeVeraCurve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DE56B4218DD3B9007134A8 /* AloeVeraCurve.framework */; };
 		37DE56C5218DD3B9007134A8 /* AloeVeraCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DE56B7218DD3B9007134A8 /* AloeVeraCurve.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37DE56DC218DD408007134A8 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D0218DD408007134A8 /* Curve.swift */; };
-		37DE56DD218DD408007134A8 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D1218DD408007134A8 /* Errors.swift */; };
 		37DE56DE218DD408007134A8 /* LengthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D3218DD408007134A8 /* LengthCalculator.swift */; };
 		37DE56DF218DD408007134A8 /* QuadraticBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D5218DD408007134A8 /* QuadraticBezierCurve.swift */; };
 		37DE56E0218DD408007134A8 /* LinearBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56D6218DD408007134A8 /* LinearBezierCurve.swift */; };
@@ -21,6 +20,8 @@
 		37DE56E6218DD5C8007134A8 /* LengthCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56E5218DD5C8007134A8 /* LengthCalculatorTests.swift */; };
 		37DE56E8218DE239007134A8 /* BezierCurvesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE56E7218DE239007134A8 /* BezierCurvesTests.swift */; };
 		37DF08A9218E0E3900003391 /* ParabolaCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF08A8218E0E3900003391 /* ParabolaCurve.swift */; };
+		37F2CC172C56B4DB00FC2351 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2CC152C56B4DB00FC2351 /* Errors.swift */; };
+		37F2CC192C56B4F100FC2351 /* CurvePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2CC182C56B4E100FC2351 /* CurvePoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		37DE56BD218DD3B9007134A8 /* AloeVeraCurveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AloeVeraCurveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DE56C4218DD3B9007134A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DE56D0218DD408007134A8 /* Curve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
-		37DE56D1218DD408007134A8 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		37DE56D3218DD408007134A8 /* LengthCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthCalculator.swift; sourceTree = "<group>"; };
 		37DE56D5218DD408007134A8 /* QuadraticBezierCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticBezierCurve.swift; sourceTree = "<group>"; };
 		37DE56D6218DD408007134A8 /* LinearBezierCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearBezierCurve.swift; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		37DE56E5218DD5C8007134A8 /* LengthCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthCalculatorTests.swift; sourceTree = "<group>"; };
 		37DE56E7218DE239007134A8 /* BezierCurvesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurvesTests.swift; sourceTree = "<group>"; };
 		37DF08A8218E0E3900003391 /* ParabolaCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParabolaCurve.swift; sourceTree = "<group>"; };
+		37F2CC152C56B4DB00FC2351 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		37F2CC182C56B4E100FC2351 /* CurvePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvePoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,7 @@
 		37DE56B6218DD3B9007134A8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				37DE56D1218DD408007134A8 /* Errors.swift */,
+				37F2CC162C56B4DB00FC2351 /* Models */,
 				37DE56D4218DD408007134A8 /* Curves */,
 				37DF08A3218E0D4200003391 /* PolynomialCurves */,
 				37DE56D2218DD408007134A8 /* Helpers */,
@@ -157,6 +159,15 @@
 				37DE56DA218DD408007134A8 /* PolynomialParabolaCurve.swift */,
 			);
 			path = PolynomialCurves;
+			sourceTree = "<group>";
+		};
+		37F2CC162C56B4DB00FC2351 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37F2CC182C56B4E100FC2351 /* CurvePoint.swift */,
+				37F2CC152C56B4DB00FC2351 /* Errors.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,13 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DE56DD218DD408007134A8 /* Errors.swift in Sources */,
+				37F2CC192C56B4F100FC2351 /* CurvePoint.swift in Sources */,
 				37DE56DF218DD408007134A8 /* QuadraticBezierCurve.swift in Sources */,
 				37DE56DC218DD408007134A8 /* Curve.swift in Sources */,
 				37DE56E2218DD408007134A8 /* ArcCurve.swift in Sources */,
 				37DE56DE218DD408007134A8 /* LengthCalculator.swift in Sources */,
 				37DE56E3218DD408007134A8 /* PolynomialParabolaCurve.swift in Sources */,
 				37DF08A9218E0E3900003391 /* ParabolaCurve.swift in Sources */,
+				37F2CC172C56B4DB00FC2351 /* Errors.swift in Sources */,
 				37DE56E4218DD408007134A8 /* PolynomialLineCurve.swift in Sources */,
 				37DE56E0218DD408007134A8 /* LinearBezierCurve.swift in Sources */,
 				37DE56E1218DD408007134A8 /* CubicBezierCurve.swift in Sources */,
